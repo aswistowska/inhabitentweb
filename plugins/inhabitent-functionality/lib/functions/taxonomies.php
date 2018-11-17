@@ -5,7 +5,6 @@
  * @link  http://codex.wordpress.org/Function_Reference/register_taxonomy
  */
 
-// Add your custom taxonomies here...
 // Register Custom Taxonomy
 function custom_taxonomy() {
 
@@ -43,4 +42,4 @@ function custom_taxonomy() {
 	register_taxonomy( 'product-type', array( 'product' ), $args );
 
 }
-add_action( 'init', 'custom_taxonomy', 0 );
+add_action( 'init', 'custom_taxonomy', 0);

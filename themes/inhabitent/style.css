@@ -417,11 +417,34 @@ textarea {
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
+/* Logo */
+.site-branding {
+  width: 50px;
+  height: 50px;
+  display: inline-block; }
+  .site-branding .site-logo {
+    background: url(../images/logos/inhabitent-logo-tent.svg) center/50px no-repeat;
+    width: 50px;
+    height: 50px; }
+    .site-branding .site-logo a {
+      display: block;
+      width: 50px;
+      height: 50px; }
+      .site-branding .site-logo a h1 {
+        background: url("../images/logos/inhabitent-logo-tent.svg") no-repeat;
+        background-size: 50px 33px;
+        height: 33px;
+        margin: 0;
+        overflow: hidden;
+        text-indent: 100%;
+        white-space: nowrap;
+        width: 50px; }
+
 /* Links */
 a {
-  color: royalblue; }
+  color: #248A83; }
   a:visited {
-    color: purple; }
+    color: #248A83; }
   a:hover, a:focus, a:active {
     color: midnightblue; }
   a:focus {

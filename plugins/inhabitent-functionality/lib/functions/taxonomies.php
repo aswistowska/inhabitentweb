@@ -38,8 +38,9 @@ function custom_taxonomy() {
 		'show_admin_column'          => true,
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => true,
+		'show_in_rest' => true,
 	);
 	register_taxonomy( 'product-type', array( 'product' ), $args );
 
 }
-add_action( 'init', 'custom_taxonomy', 0);
+add_action( 'init', 'custom_taxonomy', 0 );

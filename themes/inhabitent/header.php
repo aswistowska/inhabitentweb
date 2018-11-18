@@ -21,18 +21,20 @@
 			<a class="skip-link screen-reader-text" href="#content"><?php echo esc_html( 'Skip to content' ); ?></a>
 
 			<header id="masthead" class="site-header" role="banner">
-				<div class="site-branding">
-                    <div class="site-logo">
-                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                            <h1 class="site-title screen-reader-text"></h1>
-                        </a>
-                    </div>
-				</div><!-- .site-branding -->
+                <div class="main-container">
+                    <div class="site-branding">
+                        <div class="site-logo">
+                            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+                                <h1 class="site-title screen-reader-text"></h1>
+                            </a>
+                        </div>
+                    </div><!-- .site-branding -->
 
-				<nav id="site-navigation" class="main-navigation" role="navigation">
-					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php echo esc_html( 'Primary Menu' ); ?></button>
-					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-				</nav><!-- #site-navigation -->
+                    <nav id="site-navigation" class="main-navigation" role="navigation">
+                        <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php echo esc_html( 'Primary Menu' ); ?></button>
+                        <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+                    </nav><!-- #site-navigation -->
+                </div>
 			</header><!-- #masthead -->
 
-			<div id="content" class="site-content">
+			<div id="content" class="site-content main-container">

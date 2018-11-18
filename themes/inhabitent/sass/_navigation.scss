@@ -61,7 +61,6 @@ a {
 	clear: both;
 	display: block;
 	float: left;
-	width: 100%;
 
 	ul {
 		display: none;
@@ -114,6 +113,8 @@ a {
 		&:hover > a,
 		&.focus > a {
 		}
+        padding-left: $base__space-unit;
+
 	}
 	a {
 		display: block;

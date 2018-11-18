@@ -1,5 +1,36 @@
 /*--------------------------------------------------------------
 # Page Templates
 --------------------------------------------------------------*/
+@import "variables";
 
-/* Front page */
+.site {
+  .main-container {
+    width: $site_width;
+    margin: auto;
+  }
+
+  padding-top: $base__space-unit * 2; // header do not have size if it's fixed
+  > header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+    background-color: hsla(0, 0%, 100%, .85);
+    border-bottom: $solid_border;
+    .main-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+    }
+  }
+
+  .with-sidebar {
+    display: flex;
+    .content-area {
+      width: 75%;
+
+    }
+  }
+}
+

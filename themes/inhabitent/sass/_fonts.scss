@@ -1,3 +1,54 @@
 /*--------------------------------------------------------------
 # Embedded Fonts
 --------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700');
+
+@font-face {
+  font-family: 'Novovento Sans Web';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Novecento Sans Web'), url(../fonts/Novovento-Bold.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Novovento Sans Web';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Novecento Sans Web'), url(../fonts/Novovento-Bold.woff) format('woff');
+}
+@font-face {
+  font-family: 'Novovento Sans Web';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Novecento Sans Web'), url(../fonts/Novovento-Bold.ttf) format('ttf');
+}
+@font-face {
+  font-family: 'Novovento Sans Web';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Novecento Sans Web'), url(../fonts/Novovento-Bold.eot) format('eot');
+}
+
+@font-face {
+  font-family: 'Novovento Sans Web';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Novecento Sans Web'), url(../fonts/Novovento.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Novovento Sans Web';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Novecento Sans Web'), url(../fonts/Novovento.woff) format('woff');
+}
+@font-face {
+  font-family: 'Novovento Sans Web';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Novecento Sans Web'), url(../fonts/Novovento.ttf) format('ttf');
+}
+@font-face {
+  font-family: 'Novovento Sans Web';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Novecento Sans Web'), url(../fonts/Novovento.eot) format('eot');
+}

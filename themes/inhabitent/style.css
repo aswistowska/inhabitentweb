@@ -42,6 +42,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Page Templates
 	## Front page
 --------------------------------------------------------------*/
+@import url("https://fonts.googleapis.com/css?family=Merriweather:400,700");
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
@@ -224,6 +225,54 @@ th {
 /*--------------------------------------------------------------
 # Embedded Fonts
 --------------------------------------------------------------*/
+@font-face {
+  font-family: 'Novovento Sans Web';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Novecento Sans Web"), url(../fonts/Novovento-Bold.woff2) format("woff2"); }
+
+@font-face {
+  font-family: 'Novovento Sans Web';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Novecento Sans Web"), url(../fonts/Novovento-Bold.woff) format("woff"); }
+
+@font-face {
+  font-family: 'Novovento Sans Web';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Novecento Sans Web"), url(../fonts/Novovento-Bold.ttf) format("ttf"); }
+
+@font-face {
+  font-family: 'Novovento Sans Web';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Novecento Sans Web"), url(../fonts/Novovento-Bold.eot) format("eot"); }
+
+@font-face {
+  font-family: 'Novovento Sans Web';
+  font-style: normal;
+  font-weight: 500;
+  src: local("Novecento Sans Web"), url(../fonts/Novovento.woff2) format("woff2"); }
+
+@font-face {
+  font-family: 'Novovento Sans Web';
+  font-style: normal;
+  font-weight: 500;
+  src: local("Novecento Sans Web"), url(../fonts/Novovento.woff) format("woff"); }
+
+@font-face {
+  font-family: 'Novovento Sans Web';
+  font-style: normal;
+  font-weight: 500;
+  src: local("Novecento Sans Web"), url(../fonts/Novovento.ttf) format("ttf"); }
+
+@font-face {
+  font-family: 'Novovento Sans Web';
+  font-style: normal;
+  font-weight: 500;
+  src: local("Novecento Sans Web"), url(../fonts/Novovento.eot) format("eot"); }
+
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
@@ -233,14 +282,20 @@ input,
 select,
 textarea {
   color: #404040;
-  font-family: sans-serif;
+  font-family: "Merriweather", serif;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5; }
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
+  font-family: "Novovento Sans Web", sans-serif;
+  text-transform: uppercase;
   clear: both; }
+
+nav {
+  font-family: "Novovento Sans Web", sans-serif;
+  text-transform: uppercase; }
 
 /* Copy */
 p {
@@ -456,8 +511,7 @@ a {
 .main-navigation {
   clear: both;
   display: block;
-  float: left;
-  width: 100%; }
+  float: left; }
   .main-navigation ul {
     display: none;
     list-style: none;
@@ -484,7 +538,8 @@ a {
       left: auto; }
   .main-navigation li {
     float: left;
-    position: relative; }
+    position: relative;
+    padding-left: 1.5rem; }
   .main-navigation a {
     display: block;
     text-decoration: none; }
@@ -691,4 +746,31 @@ object {
 /*--------------------------------------------------------------
 # Page Templates
 --------------------------------------------------------------*/
-/* Front page */
+.site {
+  padding-top: 3rem; }
+  .site .main-container {
+    width: 1120px;
+    margin: auto; }
+  .site > header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-bottom: 1px solid #e1e1e1; }
+    .site > header .main-container {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+  .site .with-sidebar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .site .with-sidebar .content-area {
+      width: 75%; }

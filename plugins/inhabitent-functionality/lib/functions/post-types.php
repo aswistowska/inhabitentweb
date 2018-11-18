@@ -73,7 +73,7 @@ add_action( 'init', 'products_post_type', 0 );
  * Create "Testimonial" post type
  */
 function tent_register_adventure_post_type() {
-	$slug = 'adventure';
+	$slug = 'adventures';
 	$name = 'Adventures';
 	$singular_name = 'Adventure';
 	$labels = array(

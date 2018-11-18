@@ -1,5 +1,6 @@
 <?php
 /**
+ *  Template Name: About
  * Created by PhpStorm.
  * User: agataswistowska
  * Date: 17/11/2018
@@ -14,7 +15,7 @@ get_header(); ?>
 
                 <?php while ( have_posts() ) : the_post(); ?>
 
-                    <?php get_template_part( 'template-parts/content', 'page' ); ?>
+                    <?php get_template_part( 'template-parts/content', 'about' ); ?>
 
                 <?php endwhile; // End of the loop. ?>
 

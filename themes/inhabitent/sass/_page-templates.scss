@@ -4,11 +4,6 @@
 @import "variables";
 
 .site {
-  .main-container {
-    width: $site_width;
-    margin: auto;
-  }
-
   padding-top: $base__space-unit * 2; // header do not have size if it's fixed
   > header {
     position: fixed;
@@ -25,12 +20,101 @@
     }
   }
 
+  > footer {
+    padding: $base__space-unit 0;
+    background: url(../images/dark-wood@2x.png);
+    .widget-title {
+      color: $color__orange_brand
+    }
+    color: $color__background-body;
+    a, a:hover {
+      color: $color__background-body;
+    }
+    .footer-row {
+      i {
+        @include font-size(1.25);
+        margin-right: $base__space-unit/ 3;
+      }
+      display: flex;
+      flex-direction: row;
+
+      .widget {
+        width: 25%;
+      }
+
+      .logo {
+        text-align: right;
+        width: 50%;
+        padding: $base__space-unit;
+        img {
+          max-width: 50%;
+        }
+      }
+
+      .widget_archive {
+        display: none;
+      }
+      .site-info {
+        width: 100%;
+        text-align: center;
+        font-family: $font__accent;
+      }
+    }
+
+  }
+
   .with-sidebar {
     display: flex;
-    .content-area {
+    > .content-area {
       width: 75%;
-
+      padding: $base__space-unit * 2 $base__space-unit * 2 $base__space-unit * 2 0;
+    }
+    > .widget-area {
+      width: 25%;
+      padding: $base__space-unit * 2 0 $base__space-unit * 2 $base__space-unit * 2;
+      border-left: $solid_border;
+      h2 {
+        white-space: nowrap;
+      }
     }
   }
 }
 
+.main-container {
+  width: $site_width;
+  margin: auto;
+}
+
+.page-template-about {
+  .main-container {
+    width: 100%;
+  }
+  .hero-image-header {
+    height: 100vh;
+    h1 {
+      color: $color__background-body;
+    }
+  }
+  h2 {
+    text-align: center;
+  }
+
+  padding: 0;
+  .site {
+    padding-top: 0;
+  }
+  .site {
+    > header, > footer {
+      .main-container {
+        width: $site_width;
+        margin: auto;
+      }
+    }
+  }
+
+  .entry-content > :not(header) {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px;
+  }
+}

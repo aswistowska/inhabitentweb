@@ -3,6 +3,32 @@
 --------------------------------------------------------------*/
 @import "variables";
 
+/* Front Page */
+
+.home {
+
+  .home-hero {
+    align-items: center;
+    background: linear-gradient(
+                    to bottom,
+                    rgba(0, 0, 0, 0.4) 0%,
+                    rgba(0, 0, 0, 0.4) 100%
+    ), #969696 url('../images/home-hero.jpg') no-repeat center top;
+    background-size: cover, cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+
+    img {
+      height: 275px;
+      width: 275px;
+    }
+  }
+}
+
+/* Pages */
+
 .site {
   padding-top: $base__space-unit * 2; // header do not have size if it's fixed
   > header {
@@ -85,6 +111,9 @@
   width: $site_width;
   margin: auto;
 }
+
+
+/* About */
 
 .page-template-about {
   .main-container {

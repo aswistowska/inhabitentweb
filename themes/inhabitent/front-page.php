@@ -11,10 +11,11 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-
-
-
-		</main><!-- #main -->
+            <section class="home-hero"></section>
+            <section class="product-info container"></section>
+            <section class="journal"></section>
+            <section class="adventures container"></section>
+        </main><!-- #main -->
 	</div><!-- #primary -->
 
 <?php get_footer(); ?>

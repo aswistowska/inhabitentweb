@@ -577,8 +577,9 @@ a {
 /* Menus */
 .main-navigation {
   clear: both;
-  display: block;
-  float: left; }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
   .main-navigation ul {
     display: none;
     list-style: none;
@@ -608,8 +609,26 @@ a {
     position: relative;
     padding-left: 1.5rem; }
   .main-navigation a {
-    display: block;
     text-decoration: none; }
+  .main-navigation .header-search {
+    padding-left: 1.5rem; }
+    .main-navigation .header-search .fa {
+      color: #248A83; }
+    .main-navigation .header-search .search-field {
+      display: none; }
+    .main-navigation .header-search label {
+      display: none;
+      float: left;
+      margin: 0; }
+    .main-navigation .header-search input[type="search"] {
+      border: 0;
+      background: transparent;
+      font-family: "Merriweather", serif;
+      margin-left: 0.75rem;
+      padding: 0 0.3rem;
+      text-transform: uppercase; }
+      .main-navigation .header-search input[type="search"]:focus {
+        outline: none; }
 
 /* Small menu. */
 .menu-toggle,
@@ -1002,6 +1021,7 @@ object {
   width: 1120px;
   margin: auto; }
 
+/* About, Single-Adventure*/
 .page-template-about, .single-adventures {
   padding: 0; }
   .page-template-about .main-container, .single-adventures .main-container {
@@ -1021,6 +1041,12 @@ object {
     margin-left: auto;
     margin-right: auto;
     max-width: 800px; }
+
+/* Search */
+.search header .page-title {
+  border-bottom: 1px solid #e1e1e1;
+  margin-bottom: 3rem;
+  padding-bottom: 1rem; }
 
 /*--------------------------------------------------------------
 # Products Templates

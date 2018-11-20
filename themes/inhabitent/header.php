@@ -33,6 +33,15 @@
                     <nav id="site-navigation" class="main-navigation" role="navigation">
                         <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php echo esc_html( 'Primary Menu' ); ?></button>
                         <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+                        <form role="search" method="get" class="header-search" action="<?php echo home_url( '/' ); ?>">
+					        <span class="search-form">
+                                <a href="#" class="search-toggle">
+						        <i class="fa fa-search" onclick="showSearch()"></i>
+                                </a>
+						    </span>
+                            <label style="display: none">Search on the page</label>
+                            <input id="header-search-field" class="search-field" type="search" placeholder="Type and hit Enter..." value="<?php echo esc_attr( get_search_query() ); ?>" name="s" title="Search for:" />
+                        </form>
                     </nav><!-- #site-navigation -->
                 </div>
 			</header><!-- #masthead -->

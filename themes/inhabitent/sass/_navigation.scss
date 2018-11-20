@@ -59,8 +59,7 @@ a {
 
 .main-navigation {
 	clear: both;
-	display: block;
-	float: left;
+	display: flex;
 
 	ul {
 		display: none;
@@ -117,7 +116,7 @@ a {
 
 	}
 	a {
-		display: block;
+
 		text-decoration: none;
 	}
 
@@ -125,6 +124,36 @@ a {
 	.current-menu-item > a,
 	.current_page_ancestor > a {
 	}
+
+  .header-search {
+    padding-left: 1.5rem;
+
+    .fa {
+      color: $color__green_brand;
+    }
+    .search-field {
+      display: none;
+    }
+
+    label {
+      display: none;
+      float: left;
+      margin: 0;
+    }
+
+    input[type="search"] {
+      border: 0;
+      background: transparent;
+      font-family: $font__main;
+      margin-left: $base__space-unit / 2;
+      padding: 0 ($base__space-unit / 5);
+      text-transform: uppercase;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
 }
 
 /* Small menu. */

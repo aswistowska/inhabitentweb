@@ -1,5 +1,5 @@
 function showSearch() {
-    let search_field = document.getElementById('header-search-field');
+    let search_field = document.getElementById('search-box');
 
     if ( search_field.style.display == 'none' ) {
         search_field.style.display = 'inline';

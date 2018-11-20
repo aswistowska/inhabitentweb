@@ -39,8 +39,8 @@
 						        <i class="fa fa-search" onclick="showSearch()"></i>
                                 </a>
 						    </span>
-                            <label style="display: none">Search on the page</label>
-                            <input id="header-search-field" class="search-field" type="search" placeholder="Type and hit Enter..." value="<?php echo esc_attr( get_search_query() ); ?>" name="s" title="Search for:" />
+                            <label style="display: none">Search for...</label>
+                            <input id="search-box" class="search-field" type="search" placeholder="Type and hit Enter..." value="<?php echo esc_attr( get_search_query() ); ?>" name="s" title="Search for:" />
                         </form>
                     </nav><!-- #site-navigation -->
                 </div>

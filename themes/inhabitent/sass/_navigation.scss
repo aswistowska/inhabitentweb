@@ -125,23 +125,17 @@ a {
 	.current_page_ancestor > a {
 	}
 
+
+  /* search navigation */
+
   .header-search {
     padding-left: 1.5rem;
 
     .fa {
       color: $color__green_brand;
     }
-    .search-field {
+    #search-box {
       display: none;
-    }
-
-    label {
-      display: none;
-      float: left;
-      margin: 0;
-    }
-
-    input[type="search"] {
       border: 0;
       background: transparent;
       font-family: $font__main;
@@ -153,6 +147,11 @@ a {
         outline: none;
       }
     }
+
+    label {
+      display: none;
+    }
+
   }
 }
 

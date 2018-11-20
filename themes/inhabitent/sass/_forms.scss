@@ -15,10 +15,31 @@ input[type="submit"] {
   padding: $base__space-unit/2 $base__space-unit;
   color: $color__background-body;
   text-transform: uppercase;
+  font-family: $font__accent;
   &:hover {
     background: darken($color__link, 10%);
   }
+  i.fa {
+    margin-right: $base__space-unit/2 ;
+  }
 
+  &.black-btn {
+    background: $color__background-body;
+    color: $color__text-main;
+    a,a:visited {
+      color: $color__text-main;
+    }
+    border: 1px solid $color__text-main;
+
+    &:hover {
+      background: $color__link;
+      color: $color__background-body;
+      a {
+        color: $color__background-body;
+      }
+      border: 1px solid $color__link;
+    }
+  }
 }
 
 /* Fields */

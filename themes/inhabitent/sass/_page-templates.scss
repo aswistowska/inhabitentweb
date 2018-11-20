@@ -6,7 +6,12 @@
 /* Front Page */
 
 .home {
-
+  .site {
+    padding-top: 0;
+  }
+  .main-container {
+    width: 100%;
+  }
   .home-hero {
     align-items: center;
     background: linear-gradient(
@@ -27,13 +32,22 @@
   }
 }
 
-/* Pages */
+.customize-support {
+  .site {
+    > header {
+      top: 32px;
+    }
+  }
+}
 
+/* Pages */
 .site {
   padding-top: $base__space-unit * 2; // header do not have size if it's fixed
   > header {
+
     position: fixed;
     top: 0;
+
     width: 100%;
     z-index: 3;
     background-color: hsla(0, 0%, 100%, .85);
@@ -101,6 +115,7 @@
       border-left: $solid_border;
       h2 {
         white-space: nowrap;
+        @include font-size(1.5);
       }
     }
   }

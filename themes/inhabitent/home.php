@@ -23,9 +23,9 @@ get_header(); ?>
 					<?php while ( have_posts() ) : the_post(); ?>
 
 						<?php get_template_part('template-parts/content' ); ?>
-						<?php echo '<p><a href=' ?>
-	                <?php the_permalink()?>
-	                <?php echo 'class=\"read-more black-btn\">Read more →</a></p>'?>
+                        <p>
+                            <button class="black-btn"><a href="<?php the_permalink()?>">Read more →</a></button>
+                        </p>
 
 	            <?php endwhile; ?>
 

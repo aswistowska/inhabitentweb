@@ -1,0 +1,43 @@
+@import "variables";
+
+@mixin green-box {
+  position: absolute;
+  background: $color__green_brand;
+  color: $color__background-body;
+  a,a:visited {
+    color: $color__background-body;
+    &:hover {
+      color: lighten($color__orange_brand, 25);
+    }
+
+  }
+  font-family: $font__accent;
+}
+
+.blog, .single-post, .tag, .category {
+  .entry-header {
+    line-height: 0;
+    position: relative;
+    .entry-title {
+      @include green-box();
+      line-height: $font__line-height-body * .75;
+      top: $base__space-unit;
+      padding: $base__space-unit/2 $base__space-unit;
+      max-width: 75%;
+    }
+    .entry-meta {
+      @include green-box();
+      line-height: $font__line-height-body;
+      bottom: 0;
+      right: 0;
+      padding: $base__space-unit/4 $base__space-unit;
+    }
+  }
+  .entry-footer {
+    font-family: $font__accent;
+    text-transform: uppercase;
+    .cat-links {
+      margin-right: $base__space-unit;
+    }
+  }
+}

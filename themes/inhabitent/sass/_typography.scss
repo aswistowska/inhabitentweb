@@ -21,6 +21,16 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: $font__accent;
 	text-transform: uppercase;
 	clear: both;
+	line-height: 1;
+}
+
+h1 {
+	@include font-size(2.4);
+}
+
+
+h2 {
+	@include font-size(2.4);
 }
 
 nav {
@@ -31,6 +41,7 @@ nav {
 
 p {
 	margin-bottom: $base__space-unit;
+	line-height: $font__line-height-body;
 }
 
 dfn, cite, em, i {

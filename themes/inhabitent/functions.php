@@ -88,6 +88,17 @@ function red_starter_minified_css( $stylesheet_uri, $stylesheet_dir_uri ) {
 }
 add_filter( 'stylesheet_uri', 'red_starter_minified_css', 10, 2 );
 
+
+
+function red_starter_modify_query( $query ) {
+	// if post type is produce, show all
+	if($query->query["post_type"] == 'product') {
+		$query->query_vars["posts_per_page"] = -1;
+	}
+
+}
+add_action( 'pre_get_posts', 'red_starter_modify_query' );
+
 /**
  * Enqueue scripts and styles.
  */

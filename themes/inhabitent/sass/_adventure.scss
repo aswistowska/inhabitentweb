@@ -1,0 +1,132 @@
+@import "variables";
+@import "mixins";
+
+// generic adventures grid
+.adventures-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 2fr;
+  grid-gap: 20px 20px;
+
+  .adventure-block {
+    display: flex;
+    position: relative;
+    .adventures-wrapper {
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 1;
+      overflow: hidden;
+    }
+    img {
+      position: absolute;
+      min-height: 630px;
+      width: auto;
+      z-index: -1;
+      left: 50%;
+      max-height: 620px;
+      max-width: none;
+      top: 75%;
+      transform: translate(-50%, -75%);
+    }
+    h3 {
+      font-family: $font__main;
+      text-transform: capitalize;
+      font-weight: normal;
+      a {
+        color: $color__background-body;
+      }
+      margin: $base__space-unit;
+    }
+
+    .button {
+      margin: $base__space-unit;
+    }
+
+    &::before {
+      content: ' ';
+      display: inline-block;
+      width: 1px;
+      height: 0;
+      padding-bottom: calc(100% - 24px);
+    }
+
+  }
+}
+
+/* Adventures */
+.post-type-archive-adventures {
+  .adventures-grid {
+    margin-bottom: 4*$base__space-unit;
+    @include font-size(2.5);
+    .adventure-block {
+      h3 {
+        margin-top: 3*$base__space-unit;
+      }
+    }
+  }
+
+}
+
+// style for grid at home page
+.home {
+  .adventures {
+    .adventures-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-rows: 2fr;
+      grid-gap: 20px 20px;
+      grid-template-areas: 'a a b b' 'a a c d';
+
+      .adventure-block {
+        &:nth-child(1) {
+          &::before {
+            padding-bottom: calc(100% - 24px);
+          }
+          @include font-size(2);
+          grid-area: a;
+        }
+        &:nth-child(2) {
+          @include font-size(1.5);
+          &::before {
+            padding-bottom: calc((100% / 2) - 12px);
+          }
+          grid-area: b;
+        }
+        &:nth-child(3) {
+          @include font-size(1.25);
+          &::before {
+            padding-bottom: calc((100% / 2) - 12px);
+          }
+          grid-area: c;
+        }
+        &:nth-child(4) {
+          @include font-size(1.25);
+          &::before {
+            padding-bottom: calc((100% / 2) - 12px);
+          }
+          grid-area: d;
+        }
+      }
+    }
+    > .button {
+      color: $color__background-screen;
+      @include font-size(1.25);
+      display: inline-block;
+      margin: $base__space-unit 0;
+    }
+  }
+}
+
+.single-adventures {
+  .entry-meta {
+    font-family: $font__main;
+    @include font-size(1.2);
+    text-transform: uppercase;
+  }
+
+}
+
+

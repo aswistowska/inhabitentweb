@@ -2,6 +2,8 @@
 # Products Templates
 --------------------------------------------------------------*/
 @import "variables";
+@import "mixins";
+
 
 .post-type-archive-product, .tax-product-type {
   .page-header {
@@ -31,18 +33,7 @@
       border: $solid_border;
       // https://jonathannicol.com/blog/2014/06/16/centre-crop-thumbnails-with-css/
       .thumbnail-wrapper {
-        height: 250px;
-        position: relative;
-        overflow: hidden;
-        img {
-          position: absolute;
-          height: 250px;
-          width: auto;
-          max-width: initial;
-          left: 50%;
-          top: 50%;
-          transform: translate(-50%, -50%);
-        }
+        @include make-thumbnail(250px)
       }
       .product-title-box {
         position: relative;

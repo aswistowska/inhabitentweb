@@ -2,15 +2,14 @@
 # Page Templates
 --------------------------------------------------------------*/
 @import "variables";
+@import "mixins";
 
 /* Front Page */
 
 .home {
-  .site {
-    padding-top: 0;
-  }
-  .main-container {
-    width: 100%;
+  h2 {
+    text-align: center;
+    font-weight: normal;
   }
   .home-hero {
     align-items: center;
@@ -30,6 +29,95 @@
       width: 275px;
     }
   }
+
+  .product-type-blocks {
+    display: flex;
+    .product-type-block {
+      &:first-child {
+        margin-left: 0;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+      margin: $base__space-unit;
+      padding: $base__space-unit/2;
+      border: $solid_border;
+      border-top-width: 5px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      img {
+        height: 70px;
+      }
+      p {
+        flex-grow: 1;
+      }
+      a.button {
+        color: $color__background-body;
+      }
+      &:hover {
+        border-color: $color__orange_brand;
+      }
+    }
+
+  }
+
+  .posts-blocks {
+    display: flex;
+    $space-unit: $base__space-unit/2;
+    .post-block {
+      width: 33%;
+      border: $solid_border;
+      display: flex;
+      flex-direction: column;
+
+      margin: $base__space-unit;
+      &:first-child {
+        margin-left: 0;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+      .thumbnail-wrapper {
+        @include make-thumbnail(250px);
+      }
+      p {
+        margin: $space-unit $space-unit 0;
+        @include font-size(0.75);
+      }
+
+      h3 {
+        margin: 0 $space-unit $space-unit;
+      }
+
+      a {
+        margin: $space-unit;
+        align-self: start;
+      }
+    }
+  }
+
+
+  .site {
+    padding-top: 0;
+
+    > header,
+    > footer {
+      .main-container {
+        width: $site_width;
+        margin: auto;
+      }
+    }
+    section:not(.home-hero) {
+      width: $site_width;
+      margin: auto;
+    }
+  }
+  .main-container {
+    width: 100%;
+  }
+
 }
 
 .customize-support {
@@ -121,16 +209,13 @@
   }
 }
 
-
 .main-container {
   width: $site_width;
   margin: auto;
 }
 
 
-/* About */
-
-.page-template-about {
+.page-template-about, .single-adventures {
   .main-container {
     width: 100%;
   }
@@ -157,7 +242,7 @@
     }
   }
 
-  .entry-content > :not(header) {
+  .entry-content > :not(.hero-image-header) {
     margin-left: auto;
     margin-right: auto;
     max-width: 800px;

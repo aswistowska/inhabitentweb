@@ -422,6 +422,7 @@ table {
 # Forms
 --------------------------------------------------------------*/
 /* Buttons */
+.button,
 button,
 input[type="button"],
 input[type="reset"],
@@ -435,24 +436,29 @@ input[type="submit"] {
   color: #fff;
   text-transform: uppercase;
   font-family: "Novovento Sans Web", sans-serif; }
+  .button:hover,
   button:hover,
   input[type="button"]:hover,
   input[type="reset"]:hover,
   input[type="submit"]:hover {
     background: #19625d; }
+  .button i.fa,
   button i.fa,
   input[type="button"] i.fa,
   input[type="reset"] i.fa,
   input[type="submit"] i.fa {
     margin-right: 0.75rem; }
+  .button.black-btn,
   button.black-btn,
   input[type="button"].black-btn,
   input[type="reset"].black-btn,
   input[type="submit"].black-btn {
-    background: #fff;
+    background: rgba(0, 0, 0, 0);
     color: #404040;
     border: 1px solid #404040; }
-    button.black-btn a, button.black-btn a:visited,
+    .button.black-btn a, .button.black-btn a:visited,
+    button.black-btn a,
+    button.black-btn a:visited,
     input[type="button"].black-btn a,
     input[type="button"].black-btn a:visited,
     input[type="reset"].black-btn a,
@@ -460,6 +466,7 @@ input[type="submit"] {
     input[type="submit"].black-btn a,
     input[type="submit"].black-btn a:visited {
       color: #404040; }
+    .button.black-btn:hover,
     button.black-btn:hover,
     input[type="button"].black-btn:hover,
     input[type="reset"].black-btn:hover,
@@ -467,10 +474,43 @@ input[type="submit"] {
       background: #248A83;
       color: #fff;
       border: 1px solid #248A83; }
+      .button.black-btn:hover a,
       button.black-btn:hover a,
       input[type="button"].black-btn:hover a,
       input[type="reset"].black-btn:hover a,
       input[type="submit"].black-btn:hover a {
+        color: #fff; }
+  .button.white-btn,
+  button.white-btn,
+  input[type="button"].white-btn,
+  input[type="reset"].white-btn,
+  input[type="submit"].white-btn {
+    background: rgba(0, 0, 0, 0);
+    color: #f1f1f1;
+    border: 1px solid #f1f1f1; }
+    .button.white-btn a, .button.white-btn a:visited,
+    button.white-btn a,
+    button.white-btn a:visited,
+    input[type="button"].white-btn a,
+    input[type="button"].white-btn a:visited,
+    input[type="reset"].white-btn a,
+    input[type="reset"].white-btn a:visited,
+    input[type="submit"].white-btn a,
+    input[type="submit"].white-btn a:visited {
+      color: #f1f1f1; }
+    .button.white-btn:hover,
+    button.white-btn:hover,
+    input[type="button"].white-btn:hover,
+    input[type="reset"].white-btn:hover,
+    input[type="submit"].white-btn:hover {
+      background: #248A83;
+      color: #fff;
+      border: 1px solid #248A83; }
+      .button.white-btn:hover a,
+      button.white-btn:hover a,
+      input[type="button"].white-btn:hover a,
+      input[type="reset"].white-btn:hover a,
+      input[type="submit"].white-btn:hover a {
         color: #fff; }
 
 /* Fields */
@@ -769,11 +809,9 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 /* Front Page */
-.home .site {
-  padding-top: 0; }
-
-.home .main-container {
-  width: 100%; }
+.home h2 {
+  text-align: center;
+  font-weight: normal; }
 
 .home .home-hero {
   -webkit-box-align: center;
@@ -796,6 +834,96 @@ object {
   .home .home-hero img {
     height: 275px;
     width: 275px; }
+
+.home .product-type-blocks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .home .product-type-blocks .product-type-block {
+    margin: 1.5rem;
+    padding: 0.75rem;
+    border: 1px solid #e1e1e1;
+    border-top-width: 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .home .product-type-blocks .product-type-block:first-child {
+      margin-left: 0; }
+    .home .product-type-blocks .product-type-block:last-child {
+      margin-right: 0; }
+    .home .product-type-blocks .product-type-block img {
+      height: 70px; }
+    .home .product-type-blocks .product-type-block p {
+      -webkit-box-flex: 1;
+          -ms-flex-positive: 1;
+              flex-grow: 1; }
+    .home .product-type-blocks .product-type-block a.button {
+      color: #fff; }
+    .home .product-type-blocks .product-type-block:hover {
+      border-color: #d99054; }
+
+.home .posts-blocks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .home .posts-blocks .post-block {
+    width: 33%;
+    border: 1px solid #e1e1e1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 1.5rem; }
+    .home .posts-blocks .post-block:first-child {
+      margin-left: 0; }
+    .home .posts-blocks .post-block:last-child {
+      margin-right: 0; }
+    .home .posts-blocks .post-block .thumbnail-wrapper {
+      height: 250px;
+      position: relative;
+      overflow: hidden; }
+      .home .posts-blocks .post-block .thumbnail-wrapper img {
+        position: absolute;
+        height: 250px;
+        width: auto;
+        max-width: initial;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%); }
+    .home .posts-blocks .post-block p {
+      margin: 0.75rem 0.75rem 0;
+      font-size: 12px;
+      font-size: 0.75rem; }
+    .home .posts-blocks .post-block h3 {
+      margin: 0 0.75rem 0.75rem; }
+    .home .posts-blocks .post-block a {
+      margin: 0.75rem;
+      -ms-flex-item-align: start;
+          align-self: start; }
+
+.home .site {
+  padding-top: 0; }
+  .home .site > header .main-container,
+  .home .site > footer .main-container {
+    width: 1120px;
+    margin: auto; }
+  .home .site section:not(.home-hero) {
+    width: 1120px;
+    margin: auto; }
+
+.home .main-container {
+  width: 100%; }
 
 .customize-support .site > header {
   top: 32px; }
@@ -874,23 +1002,22 @@ object {
   width: 1120px;
   margin: auto; }
 
-/* About */
-.page-template-about {
+.page-template-about, .single-adventures {
   padding: 0; }
-  .page-template-about .main-container {
+  .page-template-about .main-container, .single-adventures .main-container {
     width: 100%; }
-  .page-template-about .hero-image-header {
+  .page-template-about .hero-image-header, .single-adventures .hero-image-header {
     height: 100vh; }
-    .page-template-about .hero-image-header h1 {
+    .page-template-about .hero-image-header h1, .single-adventures .hero-image-header h1 {
       color: #fff; }
-  .page-template-about h2 {
+  .page-template-about h2, .single-adventures h2 {
     text-align: center; }
-  .page-template-about .site {
+  .page-template-about .site, .single-adventures .site {
     padding-top: 0; }
-  .page-template-about .site > header .main-container, .page-template-about .site > footer .main-container {
+  .page-template-about .site > header .main-container, .page-template-about .site > footer .main-container, .single-adventures .site > header .main-container, .single-adventures .site > footer .main-container {
     width: 1120px;
     margin: auto; }
-  .page-template-about .entry-content > :not(header) {
+  .page-template-about .entry-content > :not(.hero-image-header), .single-adventures .entry-content > :not(.hero-image-header) {
     margin-left: auto;
     margin-right: auto;
     max-width: 800px; }
@@ -1014,3 +1141,100 @@ object {
   text-transform: uppercase; }
   .blog .entry-footer .cat-links, .single-post .entry-footer .cat-links, .tag .entry-footer .cat-links, .category .entry-footer .cat-links {
     margin-right: 1.5rem; }
+
+.adventures-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 2fr;
+  grid-gap: 20px 20px; }
+  .adventures-grid .adventure-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative; }
+    .adventures-grid .adventure-block .adventures-wrapper {
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 1;
+      overflow: hidden; }
+    .adventures-grid .adventure-block img {
+      position: absolute;
+      min-height: 630px;
+      width: auto;
+      z-index: -1;
+      left: 50%;
+      max-height: 620px;
+      max-width: none;
+      top: 75%;
+      -webkit-transform: translate(-50%, -75%);
+              transform: translate(-50%, -75%); }
+    .adventures-grid .adventure-block h3 {
+      font-family: "Merriweather", serif;
+      text-transform: capitalize;
+      font-weight: normal;
+      margin: 1.5rem; }
+      .adventures-grid .adventure-block h3 a {
+        color: #fff; }
+    .adventures-grid .adventure-block .button {
+      margin: 1.5rem; }
+    .adventures-grid .adventure-block::before {
+      content: ' ';
+      display: inline-block;
+      width: 1px;
+      height: 0;
+      padding-bottom: calc(100% - 24px); }
+
+/* Adventures */
+.post-type-archive-adventures .adventures-grid {
+  margin-bottom: 6rem;
+  font-size: 40px;
+  font-size: 2.5rem; }
+  .post-type-archive-adventures .adventures-grid .adventure-block h3 {
+    margin-top: 4.5rem; }
+
+.home .adventures .adventures-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 2fr;
+  grid-gap: 20px 20px;
+  grid-template-areas: 'a a b b' 'a a c d'; }
+  .home .adventures .adventures-grid .adventure-block:nth-child(1) {
+    font-size: 32px;
+    font-size: 2rem;
+    grid-area: a; }
+    .home .adventures .adventures-grid .adventure-block:nth-child(1)::before {
+      padding-bottom: calc(100% - 24px); }
+  .home .adventures .adventures-grid .adventure-block:nth-child(2) {
+    font-size: 24px;
+    font-size: 1.5rem;
+    grid-area: b; }
+    .home .adventures .adventures-grid .adventure-block:nth-child(2)::before {
+      padding-bottom: calc((100% / 2) - 12px); }
+  .home .adventures .adventures-grid .adventure-block:nth-child(3) {
+    font-size: 20px;
+    font-size: 1.25rem;
+    grid-area: c; }
+    .home .adventures .adventures-grid .adventure-block:nth-child(3)::before {
+      padding-bottom: calc((100% / 2) - 12px); }
+  .home .adventures .adventures-grid .adventure-block:nth-child(4) {
+    font-size: 20px;
+    font-size: 1.25rem;
+    grid-area: d; }
+    .home .adventures .adventures-grid .adventure-block:nth-child(4)::before {
+      padding-bottom: calc((100% / 2) - 12px); }
+
+.home .adventures > .button {
+  color: #f1f1f1;
+  font-size: 20px;
+  font-size: 1.25rem;
+  display: inline-block;
+  margin: 1.5rem 0; }
+
+.single-adventures .entry-meta {
+  font-family: "Merriweather", serif;
+  font-size: 19.2px;
+  font-size: 1.2rem;
+  text-transform: uppercase; }

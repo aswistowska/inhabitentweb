@@ -3,7 +3,25 @@
 --------------------------------------------------------------*/
 
 /* Buttons */
+@mixin special-button($color) {
+  background: rgba(0,0,0,0);
+  color: $color;
+  a, a:visited {
+    color: $color;
+  }
+  border: 1px solid $color;
 
+  &:hover {
+    background: $color__link;
+    color: $color__background-body;
+    a {
+      color: $color__background-body;
+    }
+    border: 1px solid $color__link;
+  }
+}
+
+.button,
 button,
 input[type="button"],
 input[type="reset"],
@@ -20,26 +38,16 @@ input[type="submit"] {
     background: darken($color__link, 10%);
   }
   i.fa {
-    margin-right: $base__space-unit/2 ;
+    margin-right: $base__space-unit/2;
   }
 
   &.black-btn {
-    background: $color__background-body;
-    color: $color__text-main;
-    a,a:visited {
-      color: $color__text-main;
-    }
-    border: 1px solid $color__text-main;
-
-    &:hover {
-      background: $color__link;
-      color: $color__background-body;
-      a {
-        color: $color__background-body;
-      }
-      border: 1px solid $color__link;
-    }
+    @include special-button($color__text-main);
   }
+  &.white-btn {
+    @include special-button($color__background-screen);
+  }
+
 }
 
 /* Fields */

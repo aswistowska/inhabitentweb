@@ -9,6 +9,10 @@
 	select {
 		max-width: 100%;
 	}
+
+  .fa {
+    margin-right: $base__space-unit;
+  }
 }
 
 /* Search widget. */

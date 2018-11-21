@@ -726,6 +726,8 @@ a {
   /* Make sure select elements fit in widgets. */ }
   .widget select {
     max-width: 100%; }
+  .widget .fa {
+    margin-right: 1.5rem; }
 
 /* Search widget. */
 .widget_search .search-submit {

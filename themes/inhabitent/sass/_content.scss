@@ -47,3 +47,43 @@
 .bypostauthor {
 	display: block;
 }
+
+.comment-form {
+
+  label {
+    text-transform: uppercase;
+    margin-bottom: .5rem;
+    font-family: $font__accent;
+  }
+  .required {
+    color: $color__orange_brand;
+  }
+
+  .comment-form-author,
+  .comment-form-email {
+    float: left;
+
+    input {
+      width: 100%;
+    }
+  }
+
+  .comment-form-author {
+    margin-right: 1%;
+    width: 49%;
+  }
+
+  .comment-form-email {
+    margin-left: 1%;
+    width: 49%;
+  }
+
+  .comment-form-url {
+    clear: left;
+    width: 100%;
+
+    input {
+      width: 100%;
+    }
+  }
+}

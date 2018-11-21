@@ -135,7 +135,11 @@ a {
       color: $color__green_brand;
     }
     #search-box {
-      display: none;
+      &.hidden {
+        display: none;
+      }
+      display: inline;
+      //display: none;
       border: 0;
       background: transparent;
       font-family: $font__main;

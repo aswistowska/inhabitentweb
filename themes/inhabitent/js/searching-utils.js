@@ -1,15 +1,20 @@
-function showSearch() {
+document.addEventListener("DOMContentLoaded", function () {
     const search_field = document.getElementById('search-box');
-    console.log(search_field.style.display);
-    if ( !search_field.style.display || search_field.style.display == 'none' ) {
-        search_field.style.display = 'inline';
-        search_field.focus();
-    }
-    else {
-        search_field.onblur = hideSearch();
-    }
-    
-    function hideSearch() {
-        search_field.style.display = 'none';
-    }
-}
+
+    document.querySelector('.search-toggle').addEventListener("click", function (event) {
+            event.preventDefault();
+
+            if (search_field.classList.contains('hidden')) {
+                search_field.classList.remove('hidden');
+                search_field.focus();
+            }
+            else {
+                search_field.onblur = hideSearch();
+            }
+
+            function hideSearch() {
+                search_field.classList.add('hidden');
+            }
+        }
+    );
+});

@@ -616,13 +616,15 @@ a {
     .main-navigation .header-search .fa {
       color: #248A83; }
     .main-navigation .header-search #search-box {
-      display: none;
+      display: inline;
       border: 0;
       background: transparent;
       font-family: "Merriweather", serif;
       margin-left: 0.75rem;
       padding: 0 0.3rem;
       text-transform: uppercase; }
+      .main-navigation .header-search #search-box.hidden {
+        display: none; }
       .main-navigation .header-search #search-box:focus {
         outline: none; }
     .main-navigation .header-search label {

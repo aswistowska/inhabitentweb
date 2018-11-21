@@ -36,11 +36,11 @@
                         <form role="search" method="get" class="header-search" action="<?php echo home_url( '/' ); ?>">
 					        <span class="search-form">
                                 <a href="#" class="search-toggle">
-						        <i class="fa fa-search" onclick="showSearch()"></i>
+						        <i class="fa fa-search"></i>
                                 </a>
 						    </span>
                             <label style="display: none">Search for...</label>
-                            <input id="search-box" class="search-field" type="search" placeholder="Type and hit Enter..." value="<?php echo esc_attr( get_search_query() ); ?>" name="s" title="Search for:" />
+                            <input id="search-box" class="search-field hidden" type="search" placeholder="Type and hit Enter..." value="<?php echo esc_attr( get_search_query() ); ?>" name="s" title="Search for:" />
                         </form>
                     </nav><!-- #site-navigation -->
                 </div>
